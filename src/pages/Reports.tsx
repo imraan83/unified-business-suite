@@ -45,8 +45,8 @@ export default function Reports() {
               <BarChart data={monthlyPL}>
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(215, 20%, 90%)" />
                 <XAxis dataKey="month" tick={{ fontSize: 12 }} />
-                <YAxis tick={{ fontSize: 12 }} tickFormatter={(v) => `$${v / 1000}k`} />
-                <Tooltip formatter={(v: number) => `$${v.toLocaleString()}`} />
+                <YAxis tick={{ fontSize: 12 }} tickFormatter={(v) => `PKR ${v / 1000}k`} />
+                <Tooltip formatter={(v: number) => `PKR ${v.toLocaleString()}`} />
                 <Bar dataKey="revenue" fill="hsl(220, 70%, 45%)" radius={[4, 4, 0, 0]} name="Revenue" />
                 <Bar dataKey="cogs" fill="hsl(0, 72%, 51%)" radius={[4, 4, 0, 0]} name="COGS" />
                 <Bar dataKey="gross" fill="hsl(170, 60%, 40%)" radius={[4, 4, 0, 0]} name="Gross Profit" />
@@ -61,8 +61,8 @@ export default function Reports() {
               <AreaChart data={cashFlow}>
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(215, 20%, 90%)" />
                 <XAxis dataKey="month" tick={{ fontSize: 12 }} />
-                <YAxis tick={{ fontSize: 12 }} tickFormatter={(v) => `$${v / 1000}k`} />
-                <Tooltip formatter={(v: number) => `$${v.toLocaleString()}`} />
+                <YAxis tick={{ fontSize: 12 }} tickFormatter={(v) => `PKR ${v / 1000}k`} />
+                <Tooltip formatter={(v: number) => `PKR ${v.toLocaleString()}`} />
                 <Area type="monotone" dataKey="inflow" fill="hsl(170, 60%, 40%)" fillOpacity={0.2} stroke="hsl(170, 60%, 40%)" name="Inflow" />
                 <Area type="monotone" dataKey="outflow" fill="hsl(0, 72%, 51%)" fillOpacity={0.2} stroke="hsl(0, 72%, 51%)" name="Outflow" />
               </AreaChart>

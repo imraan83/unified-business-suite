@@ -28,11 +28,11 @@ const categoryData = [
 const COLORS = ["hsl(220, 70%, 45%)", "hsl(170, 60%, 40%)", "hsl(38, 92%, 50%)"];
 
 const recentOrders = [
-  { id: "PO-2024-001", supplier: "Acme Steel Corp", amount: "$12,450", status: "Pending", date: "Mar 28" },
-  { id: "PO-2024-002", supplier: "Global Polymers", amount: "$8,320", status: "Completed", date: "Mar 27" },
-  { id: "SO-2024-015", supplier: "TechVision Ltd", amount: "$24,800", status: "In-Progress", date: "Mar 26" },
-  { id: "PO-2024-003", supplier: "MetalWorks Inc", amount: "$6,750", status: "Paid", date: "Mar 25" },
-  { id: "SO-2024-016", supplier: "BuildRight Co", amount: "$18,200", status: "Draft", date: "Mar 24" },
+  { id: "PO-2024-001", supplier: "Acme Steel Corp", amount: "PKR 12,450", status: "Pending", date: "Mar 28" },
+  { id: "PO-2024-002", supplier: "Global Polymers", amount: "PKR 8,320", status: "Completed", date: "Mar 27" },
+  { id: "SO-2024-015", supplier: "TechVision Ltd", amount: "PKR 24,800", status: "In-Progress", date: "Mar 26" },
+  { id: "PO-2024-003", supplier: "MetalWorks Inc", amount: "PKR 6,750", status: "Paid", date: "Mar 25" },
+  { id: "SO-2024-016", supplier: "BuildRight Co", amount: "PKR 18,200", status: "Draft", date: "Mar 24" },
 ];
 
 const orderColumns = [
@@ -52,8 +52,8 @@ export default function Dashboard() {
       </div>
 
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        <KpiCard title="Total Revenue" value="$326,400" change="+12.5% from last month" trend="up" icon={DollarSign} />
-        <KpiCard title="Inventory Value" value="$184,200" change="+3.2% from last month" trend="up" icon={Package} />
+        <KpiCard title="Total Revenue" value="PKR 326,400" change="+12.5% from last month" trend="up" icon={DollarSign} />
+        <KpiCard title="Inventory Value" value="PKR 184,200" change="+3.2% from last month" trend="up" icon={Package} />
         <KpiCard title="Production Output" value="1,750 units" change="+4.8% from last month" trend="up" icon={Factory} />
         <KpiCard title="Active Orders" value="42" change="-2.1% from last month" trend="down" icon={ShoppingCart} />
       </div>
@@ -66,8 +66,8 @@ export default function Dashboard() {
               <BarChart data={revenueData}>
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(215, 20%, 90%)" />
                 <XAxis dataKey="month" tick={{ fontSize: 12 }} />
-                <YAxis tick={{ fontSize: 12 }} tickFormatter={(v) => `$${v / 1000}k`} />
-                <Tooltip formatter={(v: number) => `$${v.toLocaleString()}`} />
+                <YAxis tick={{ fontSize: 12 }} tickFormatter={(v) => `PKR ${v / 1000}k`} />
+                <Tooltip formatter={(v: number) => `PKR ${v.toLocaleString()}`} />
                 <Bar dataKey="revenue" fill="hsl(220, 70%, 45%)" radius={[4, 4, 0, 0]} />
                 <Bar dataKey="expenses" fill="hsl(170, 60%, 40%)" radius={[4, 4, 0, 0]} />
               </BarChart>
