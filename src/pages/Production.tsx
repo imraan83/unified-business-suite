@@ -15,10 +15,10 @@ const workOrders = [
 ];
 
 const boms = [
-  { id: "BOM-001", product: "Hydraulic Pump Assembly", components: 12, cost: "$142.50", status: "Active" },
-  { id: "BOM-002", product: "Electric Motor Unit", components: 18, cost: "$235.00", status: "Active" },
-  { id: "BOM-003", product: "Control Panel Board", components: 24, cost: "$180.75", status: "Draft" },
-  { id: "BOM-004", product: "Gear Assembly Kit", components: 8, cost: "$95.20", status: "Active" },
+  { id: "BOM-001", product: "Hydraulic Pump Assembly", components: 12, cost: "PKR 142.50", status: "Active" },
+  { id: "BOM-002", product: "Electric Motor Unit", components: 18, cost: "PKR 235.00", status: "Active" },
+  { id: "BOM-003", product: "Control Panel Board", components: 24, cost: "PKR 180.75", status: "Draft" },
+  { id: "BOM-004", product: "Gear Assembly Kit", components: 8, cost: "PKR 95.20", status: "Active" },
 ];
 
 const woCols = [

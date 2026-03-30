@@ -31,7 +31,7 @@ export default function Inventory() {
 
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         <KpiCard title="Total Items" value="3,847" change="+24 new" trend="up" icon={Package} />
-        <KpiCard title="Stock Value" value="$184,200" change="+3.2%" trend="up" icon={BarChart3} />
+        <KpiCard title="Stock Value" value="PKR 184,200" change="+3.2%" trend="up" icon={BarChart3} />
         <KpiCard title="Warehouses" value="3" change="No change" trend="up" icon={Warehouse} />
         <KpiCard title="Low Stock Alerts" value="5" change="+2 items" trend="down" icon={AlertTriangle} />
       </div>
